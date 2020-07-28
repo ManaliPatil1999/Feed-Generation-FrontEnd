@@ -1,0 +1,48 @@
+<div class="container " style="height: 10px; width: auto;">
+    <div class="row-10" >
+        <div class="col-12">
+            <div style="scrollbar-highlight-color:grey; height: 20px;" >
+                <p></p>
+                <h2 style="text-align: center; background-color:lightgrey; color:black;
+                font-style:normal;
+                font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif"> LOGIN </h2>
+               
+            </div> 
+            <br>
+            <table>
+                <tr class="space" ><th></th><th></th></tr>
+                <tr class="username">
+                    <td><label for="username" 
+                      style="margin-left: 340px;  font-size: large; margin-top: 13%; text-align: center;">
+                      Username : </label>
+                    </td>   
+                    <td>
+                        <p>
+                         <input type="text" name="username"  [(ngModel)]="username" 
+                         style="width: 100%;line-height: 30px; margin-left: 50px; margin-top: 25%;"  />
+                       </p>
+                    </td>                                          
+                </tr>
+                <tr class="space" ><th></th><th></th></tr>
+                <tr class="password">
+                    <td><label for="password" style="margin-left: 350px;  font-size: large; margin-top: 5%; text-align: center;">Password : </label>
+                    </td>   
+                    <td>
+                        <p>
+                            <input type="password" name="password"  [(ngModel)]="password" 
+                            style="width: 100%;line-height: 30px; margin-left: 50px; margin-top: 10%;"  />
+                       </p>
+                    </td>                                          
+                </tr>
+            </table>
+           
+            <hr>
+            <button  class="btn btn-success" style="margin-left:45%; align-self:center; width: 150px; height: 50px;" 
+            (click)="onLogin()" class="byn btn-success">
+            Login
+           </button>
+           <hr>
+
+        </div>
+    </div>
+</div>          

@@ -1,0 +1,15 @@
+.teal.lighten-2{
+    background-color: gray !important;
+
+}
+.card.panel{
+    -webkit-transition: -webkit-box-shadow .25s;
+    transition: -webkit-box-shadow .25s;
+    transition: box-shadow .25s;
+    transition: box-shadow .25s, -webkit-box-shadow .25s;
+    padding: 1px;
+    margin: .5rem 0 1rem 0;
+    border-radius: 2px;
+    background-color: white
+    ;
+}

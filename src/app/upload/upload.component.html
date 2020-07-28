@@ -1,0 +1,36 @@
+<div class="container " style="height: 10px; width: auto;">
+    <div class="row-10">
+        <div class="col-12">
+            <div style="scrollbar-highlight-color: white; height: 20px;">
+                <p style="text-align: center;"></p>
+                <h2 style="text-align: center; background-color:lightgrey; color:black;
+                 font-style:normal;
+                 font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">
+                    UPLOAD FILE</h2>
+            </div>
+            <form class="form-group" (ngSubmit)="onUpload()">
+               
+                <label for="file"style="margin-left: 410PX;">Choose File&nbsp;&nbsp;</label>
+                <input style="text-align: center;  margin-top: 60px; width: 230px; height: 50px;" type="file" #Text id="file"
+                    accept=".csv, .docx, .txt, .xlxs, .ppt, .pdf, .doc, .file"
+                    (change)="handelFileInput($event)">
+               
+
+                <div>
+                    <button class="btn btn-success" type="submit" style="color:black; margin-top: 30px ;background-color: white; 
+                    text-align:center;text-shadow: black; font-size: 16px;
+                    align-self: center; margin-left: 48%;">
+                        UPLOAD</button>
+                </div>
+                <hr>
+
+            </form>
+        </div>
+    </div>
+</div>
+<div [hidden]="!submitted">
+    <hr>
+    <h4 style="text-align: center; margin-top: 200px;">FILE UPLOADED SUCCESSFULLY!! </h4>
+    <h6 style="text-align: center;">The file has been moved to D://archive</h6>
+    <hr>
+</div>

@@ -1,0 +1,36 @@
+<div class="container " style="height: 10px; width: auto;">
+    <div class="row-10">
+        <div class="col-12">
+            <div style="scrollbar-highlight-color: grey; height: 20px;">
+                <p style="text-align: center;"></p>
+                <h2 style="text-align: center;  background-color:lightgrey; color:black;
+                font-style:normal;
+                font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">
+                    FEED GENERATION</h2>
+            </div>
+            <div>
+                <button class="btn btn-success" type="submit" style="color:black; margin-top: 50px ;background-color: white; 
+                text-align:center;text-shadow: black; font-size: 16px;
+                align-self: center; margin-left: 45%;" (click)="onGenerate()">
+                    GENERATE</button>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+<div [hidden]="!generate ">
+    <div [hidden]="!flag">
+        <hr>
+        <h4 style="text-align: center; margin-top: 100px;">FEED IS GENERATED SUCCESSFULLY!! </h4>
+        <h6 style="text-align: center;">The file has been saved to D drive</h6>
+        <hr>
+
+    </div>
+    <div [hidden]="flag">
+        <hr>
+        <h4 style="text-align: center; margin-top: 100px;">NO TRANSACTION IS AVAILABLE FOR FEED GENERATION.. </h4>
+        <hr>
+    </div>
+
+</div>

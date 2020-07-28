@@ -1,0 +1,70 @@
+<div class="container " style="height: 10px; width: auto;">
+    <div class="row-10">
+        <div class="col-12">
+            <div style="scrollbar-highlight-color: grey; height: 20px;">
+                <p style="text-align: center;"></p>
+                <h2 style="text-align: center; background-color:lightgrey; color:black;
+                font-style:normal;
+                font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">
+                    TRANSACTIONS</h2>
+            </div>
+
+            
+            <div class="input-group-type" style="margin-top: 50px;
+             margin-left: 420px;">                
+                <input type="radio" name="Status" value="valid "
+                [(ngModel)]="UploadModel.status">
+                <label style=" font-size: large;">&nbsp;
+                    Valid &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp; </label>   
+                <input type="radio" name="Status" value="invalid "
+                 [(ngModel)]="UploadModel.status" >
+                <label style=" font-size: large;">&nbsp;Invalid </label>   
+            </div>
+            <div>
+                <button class="btn btn-success" 
+                type="submit" style="color:black; background-color: white; 
+                text-align:center;text-shadow: black; font-size: 16px;
+                align-self: center; margin-left: 45%; margin-top: 30px;"
+                (click)="onDisplay()">
+                DISPLAY</button>
+            </div>
+            <hr>
+
+            <div class="panel-body">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            
+                            <th>SR No</th>
+                            <th>ID</th>
+                            <th>Transaction Ref</th>
+                            <th>Date</th>
+                            <th>Payer</th>
+                            <th>Payee</th>
+                            <th>Amount</th>
+                            <th>Status</th>
+                            <th>Feed Generated</th>  
+                            <th>Reason</th>                          
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let UploadModel of upload; let i=index">
+                            <td>{{ i + 1}}</td>
+                            <td>{{UploadModel.id}}</td>
+                            <td>{{UploadModel.transactionRef}}</td>
+                            <td>{{UploadModel.date}}</td>
+                            <td>{{UploadModel.payer}}</td>
+                            <td>{{UploadModel.payee}}</td>
+                            <td>{{UploadModel.amount}}</td>
+                            <td>{{UploadModel.status}}</td>
+                            <td>{{UploadModel.feedgenerated}}</td>
+                            <td>{{UploadModel.reason}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+</div>
