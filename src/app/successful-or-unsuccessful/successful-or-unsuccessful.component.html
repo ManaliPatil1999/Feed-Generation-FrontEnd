@@ -1,17 +1,16 @@
+
 <div class="container " style="height: 10px; width: auto;">
     <div class="row-10">
         <div class="col-12">
             <div style="scrollbar-highlight-color: grey; height: 20px;">
                 <p style="text-align: center;"></p>
-                <h2 style="text-align: center; background-color:lightgrey; color:black;
-                font-style:normal;
-                font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">
-                    TRANSACTIONS</h2>
+                <h1 class="display">
+                    TRANSACTIONS</h1>
             </div>
 
             
-            <div class="input-group-type" style="margin-top: 50px;
-             margin-left: 420px;">                
+            <div class="input-group-type" style="margin-top: 70px;
+             margin-left: 420px; font-size: 2.0rem;">                
                 <input type="radio" name="Status" value="valid "
                 [(ngModel)]="UploadModel.status">
                 <label style=" font-size: large;">&nbsp;
@@ -22,7 +21,7 @@
                 <label style=" font-size: large;">&nbsp;Invalid </label>   
             </div>
             <div>
-                <button class="btn btn-success" 
+                <button class="btn btn-success-indigo" 
                 type="submit" style="color:black; background-color: white; 
                 text-align:center;text-shadow: black; font-size: 16px;
                 align-self: center; margin-left: 45%; margin-top: 30px;"
@@ -45,7 +44,7 @@
                             <th>Amount</th>
                             <th>Status</th>
                             <th>Feed Generated</th>  
-                            <th>Reason</th>                          
+                            <th [hidden]="!flag">Reason</th>                          
                         </tr>
                     </thead>
                     <tbody>
@@ -59,7 +58,7 @@
                             <td>{{UploadModel.amount}}</td>
                             <td>{{UploadModel.status}}</td>
                             <td>{{UploadModel.feedgenerated}}</td>
-                            <td>{{UploadModel.reason}}</td>
+                            <td [hidden]="!flag">{{UploadModel.reason}}</td>
                         </tr>
                     </tbody>
                 </table>
@@ -68,3 +67,4 @@
         </div>
     </div>
 </div>
+

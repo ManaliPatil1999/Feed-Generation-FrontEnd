@@ -25,16 +25,24 @@ export class SuccessfulOrUnsuccessfulComponent implements OnInit {
   }
   display = false;
   Status = "";
+  flag = false;
 
   constructor(private transactionService: TransactionService) { }
 
   ngOnInit(): void {
   }
 
-  public onDisplay() {
+  public onDisplay() {  
+    console.log(this.UploadModel.status);
+    if(this.UploadModel.status ==="valid "){
+      this.flag = false;
+    }else{
+      this.flag = true;
+      console.log(this.flag);
+    }
     this.transactionService.getByStatus(this.UploadModel.status)
-      .subscribe((data) => this.upload = data,
-        (error) => console.error(error));
+    .subscribe((data) => this.upload = data,
+      (error) => console.error(error));
     this.display = true;
   }
 }

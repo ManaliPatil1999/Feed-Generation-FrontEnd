@@ -1,48 +1,66 @@
-<div class="container " style="height: 10px; width: auto;">
-    <div class="row-10" >
-        <div class="col-12">
-            <div style="scrollbar-highlight-color:grey; height: 20px;" >
-                <p></p>
-                <h2 style="text-align: center; background-color:lightgrey; color:black;
-                font-style:normal;
-                font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif"> LOGIN </h2>
-               
-            </div> 
-            <br>
-            <table>
-                <tr class="space" ><th></th><th></th></tr>
-                <tr class="username">
-                    <td><label for="username" 
-                      style="margin-left: 340px;  font-size: large; margin-top: 13%; text-align: center;">
-                      Username : </label>
-                    </td>   
-                    <td>
-                        <p>
-                         <input type="text" name="username"  [(ngModel)]="username" 
-                         style="width: 100%;line-height: 30px; margin-left: 50px; margin-top: 25%;"  />
-                       </p>
-                    </td>                                          
-                </tr>
-                <tr class="space" ><th></th><th></th></tr>
-                <tr class="password">
-                    <td><label for="password" style="margin-left: 350px;  font-size: large; margin-top: 5%; text-align: center;">Password : </label>
-                    </td>   
-                    <td>
-                        <p>
-                            <input type="password" name="password"  [(ngModel)]="password" 
-                            style="width: 100%;line-height: 30px; margin-left: 50px; margin-top: 10%;"  />
-                       </p>
-                    </td>                                          
-                </tr>
-            </table>
-           
-            <hr>
-            <button  class="btn btn-success" style="margin-left:45%; align-self:center; width: 150px; height: 50px;" 
-            (click)="onLogin()" class="byn btn-success">
-            Login
-           </button>
-           <hr>
-
+ <div class="view">
+    <!-- Mask & flexbox options-->
+    <div class="mask rgba-gradient align-items-center">
+      <!-- Content -->
+      <div class="container">
+        <!--Grid row-->
+        <div class="row mt-5">
+          <!--Grid column-->
+          <div class="col-md-6 mb-5 mt-md-0 mt-5 white-text text-center text-md-left">
+            <h1 class="h1-responsive font-weight-bold wow fadeInLeft" data-wow-delay="0.3s"
+             style="text-align: center; font-size: 4.0rem; margin-top: 70px;">CLEARING FEED GENERATION
+            </h1>
+            <hr class="hr-light wow fadeInLeft" data-wow-delay="0.3s">
+            <h5 class="mb-3 wow fadeInLeft" data-wow-delay="0.3s">Generate a feed file towards clearing system in a specific format 
+              based on the input transactions to the system.</h5>
+            <a class="btn btn-outline-white wow fadeInLeft" data-wow-delay="0.3s"></a>
+          </div>
+          <!--Grid column-->
+          <!--Grid column-->
+          <div class="col-md-6 col-xl-5 mb-4"style="margin-left: 60px; margin-top: 50px">
+            <!--Form-->
+            <div class="card wow fadeInRight" data-wow-delay="0.3s" >
+              <div class="card-body">
+                <!--Header-->
+                <div class="text-center">
+                  <h3 class="white-text">
+                    <i class="fas fa-user white-text" ></i> LOGIN </h3>
+                  <hr class="hr-light">
+                </div>
+                <!--Body-->
+                <div class="md-form">
+                  <i class="fas fa-user prefix white-text active"></i>
+                  <input type="text" id="username" name="username" [(ngModel)]="username" class="white-text form-control">
+                  <label for="form3" class="active">Username </label>
+                </div>
+                <div class="md-form">
+                  <i class="fas fa-lock prefix white-text active"></i>
+                  <input type="password" name="password"  [(ngModel)]="password" class="white-text form-control">
+                  <label for="form4">Password</label>
+                </div>
+                <div class="text-center mt-4">
+                  <hr class="hr-light mb-3 mt-4">
+                  <div class="inline-ul text-center">
+                    <a class="p-2 m-2 tw-ic">
+                      <i class="fab fa-twitter white-text"></i>
+                    </a>
+                    <button class="btn btn-outline-white"  (click)="onLogin()" style="color: black; font-size: larger;">Login</button>
+                  
+                    <a class="p-2 m-2 li-ic">
+                      <i class="fab fa-linkedin-in white-text"> </i>
+                    </a>
+                   
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--/.Form-->
+          </div>
+          <!--Grid column-->
         </div>
+        <!--Grid row-->
+      </div>
+      <!-- Content -->
     </div>
-</div>          
+    <!-- Mask & flexbox options-->
+  </div>

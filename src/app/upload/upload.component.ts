@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup } from "@angular/forms";
+import { FormGroup, FormBuilder, Validators } from "@angular/forms";
 import { TransactionService } from "../transaction.service";
 import { UploadModel } from "../UploadModel";
 
@@ -27,13 +27,19 @@ export class UploadComponent implements OnInit {
     reason: null
   }
   submitted = false;
-  constructor(private httpClient: HttpClient, private transactionService: TransactionService) { }
+  constructor(private httpClient: HttpClient,
+     private transactionService: TransactionService,
+     private fb : FormBuilder) { }
 
   userFile: any;
   fileName = " ";
-  ngOnInit() {
+  formGroup = this.fb.group({
+    file : [null, Validators.required]
+  });
 
+  ngOnInit() {
   }
+  
   handelFileInput(event) {
     const file = event.target.files;
     this.userFile = file;
